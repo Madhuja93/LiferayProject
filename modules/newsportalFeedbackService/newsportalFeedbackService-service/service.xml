@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.liferay.docs.feedback.service">
+	<namespace>FB</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+    <entity name="Feedback" local-service="true" uuid="true">
+        <column name="feedbackId" type="long" primary="true"></column>
+        <column name="feedbackDate" type="Date"></column>
+        <column name="feedbackText" type="String"></column>
+        <column name="feedbackSubject" type="String"></column>
+        <column name="companyId" type="long"></column>
+        <column name="groupId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <order by="asc">
+            <order-column name="feedbackId"></order-column>
+        </order>
+        <finder return-type="Collection" name="GroupId">
+            <finder-column name="groupId" ></finder-column>
+        </finder>
+         <finder name="CompanyId" return-type="Collection">
+            <finder-column name="companyId"></finder-column>
+        </finder>
+        <finder name="FeedbackText" return-type="Collection">
+            <finder-column name="feedbackText"></finder-column>
+        </finder>
+    </entity>
+</service-builder>

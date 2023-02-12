@@ -1,0 +1,4 @@
+Bundle-Name: newsportalFeedback
+Bundle-SymbolicName: com.liferay.docs.feedback.portlet
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.docs.feedback.portlet.constants

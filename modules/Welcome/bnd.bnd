@@ -1,0 +1,4 @@
+Bundle-Name: Welcome
+Bundle-SymbolicName: com.lithan
+Bundle-Version: 1.0.0
+Export-Package: com.lithan.constants

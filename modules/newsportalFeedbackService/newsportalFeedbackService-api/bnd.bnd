@@ -1,0 +1,10 @@
+Bundle-Name: newsportalFeedbackService-api
+Bundle-SymbolicName: com.liferay.docs.feedback.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.docs.feedback.service.exception,\
+	com.liferay.docs.feedback.service.model,\
+	com.liferay.docs.feedback.service.service,\
+	com.liferay.docs.feedback.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../newsportalFeedbackService-service/service.xml
